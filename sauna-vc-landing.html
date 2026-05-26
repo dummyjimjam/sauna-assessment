@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#000000" />
+    <title>Sauna for Investors — Where deals get done</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      html { scroll-behavior: smooth; }
+      html, body {
+        background-color: #ffffff;
+        margin: 0;
+        padding: 0;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      body {
+        font-family: 'Google Sans Flex', 'Inter', -apple-system, BlinkMacSystemFont,
+          'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+        font-weight: 500;
+        font-variation-settings: 'wdth' 100, 'GRAD' 0, 'ROND' 0;
+        color: #171814;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+         HERO
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <section
+      class="relative w-full min-h-[100svh] md:min-h-0 md:h-[950px] overflow-hidden flex flex-col items-center pt-[20px] rounded-b-[40px]"
+      style="background: linear-gradient(160deg, #2a1206 0%, #4a1e0a 28%, #623328 58%, #3a1508 100%);"
+    >
+      <!-- Background: warm wood gradient + scrim -->
+      <div aria-hidden="true" class="absolute inset-0 pointer-events-none bg-[rgba(0,0,0,0.35)]"></div>
+
+      <!-- Header -->
+      <header class="relative w-full">
+        <div class="flex items-center justify-between px-6 md:px-[32px] h-[64px]">
+          <!-- Left: wordmark -->
+          <a href="/" class="text-white font-medium text-[18px] tracking-tight flex items-center gap-2">
+            <svg width="26" height="26" viewBox="0 0 28 28" fill="none">
+              <rect width="28" height="28" rx="7" fill="#93efa4"/>
+              <path d="M8 14C8 10.686 10.686 8 14 8s6 2.686 6 6-2.686 6-6 6" stroke="#003116" stroke-width="2.2" stroke-linecap="round"/>
+              <circle cx="14" cy="14" r="2.2" fill="#003116"/>
+            </svg>
+            Sauna
+          </a>
+
+          <!-- Center: glass nav pill -->
+          <nav
+            class="hidden md:inline-flex items-center justify-center gap-1 h-10 p-1 rounded-full backdrop-blur-[15px] bg-[rgba(60,60,60,0.6)]"
+          >
+            <a href="#value" class="px-4 py-2 rounded-full text-white text-[12px] leading-[16px] font-medium hover:opacity-80 transition-opacity">For VCs</a>
+            <a href="#features" class="px-4 py-2 rounded-full text-white text-[12px] leading-[16px] font-medium hover:opacity-80 transition-opacity">Features</a>
+            <a href="#how" class="px-4 py-2 rounded-full text-white text-[12px] leading-[16px] font-medium hover:opacity-80 transition-opacity">How it works</a>
+            <a href="#pricing" class="px-4 py-2 rounded-full text-white text-[12px] leading-[16px] font-medium hover:opacity-80 transition-opacity">Pricing</a>
+          </nav>
+
+          <!-- Right: Log In + Sign Up -->
+          <div class="flex items-center gap-2 h-8">
+            <a
+              href="https://app.sauna.ai"
+              class="inline-flex items-center justify-center h-8 px-4 text-white text-[12px] leading-[16px] font-medium hover:opacity-80 transition-opacity duration-150"
+            >
+              Log In
+            </a>
+            <a
+              href="https://sauna.ai"
+              class="inline-flex items-center justify-center h-8 px-4 rounded-full bg-[#93efa4] hover:bg-[#7ad895] text-[#404040] text-[12px] leading-[16px] font-medium transition-colors duration-150"
+            >
+              Sign Up
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Hero copy + CTA -->
+      <div
+        class="relative flex-1 w-full flex flex-col items-center justify-center px-6 md:px-[40px] pt-2 pb-12 md:p-[40px] md:pb-[120px]"
+      >
+        <div class="flex flex-col items-center gap-[40px] pt-20 md:pt-0">
+          <div class="flex flex-col items-center gap-3 md:gap-4 text-center">
+            <h1
+              class="text-white text-[32px] md:text-[50px] leading-tight md:leading-[60px] font-medium max-w-[620px] text-balance"
+            >
+              The AI agent that thinks<br class="md:hidden" />
+              like your best analyst.
+            </h1>
+            <p
+              class="text-[#E9E8E6] md:text-[#d1cecc] text-[16px] md:text-[22px] leading-snug md:leading-[32px] font-medium max-w-[620px] text-balance"
+            >
+              Sauna connects your deal flow, portfolio, and relationships into one
+              agent that researches, briefs, drafts, and follows up — so you don't have to.
+            </p>
+          </div>
+
+          <a
+            href="https://sauna.ai"
+            class="inline-flex items-center justify-center h-12 px-6 rounded-full bg-[#93efa4] hover:bg-[#7ad895] text-[#003116] text-[15px] md:text-[16px] leading-[20px] font-medium transition-colors duration-150 whitespace-nowrap"
+          >
+            Get started for free
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+         TRUSTED BY
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <section class="bg-[#faf9f7] py-12 px-6 md:px-[80px] rounded-b-[40px] overflow-hidden">
+      <p class="text-center text-[12px] leading-[16px] text-[#a3a3a3] uppercase tracking-[0.1em] mb-8">
+        Investors at top firms use Sauna
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-10 md:gap-16">
+        <span class="text-[17px] font-semibold text-[#a3a3a3]">Sequoia</span>
+        <span class="text-[17px] font-semibold text-[#a3a3a3]">a16z</span>
+        <span class="text-[17px] font-semibold text-[#a3a3a3]">Accel</span>
+        <span class="text-[17px] font-semibold text-[#a3a3a3]">First Round</span>
+        <span class="text-[17px] font-semibold text-[#a3a3a3]">General Catalyst</span>
+        <span class="text-[17px] font-semibold text-[#a3a3a3]">Founders Fund</span>
+      </div>
+    </section>
+
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+         VALUE PROPS (3-col)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <section id="value" class="bg-[#fafaf9] py-12 md:py-[120px] px-6 md:px-[80px] rounded-b-[40px] overflow-hidden">
+      <div class="max-w-[1156px] mx-auto">
+        <p class="text-[12px] leading-[16px] text-[#a3a3a3] uppercase tracking-[0.1em] mb-4">What Sauna does</p>
+        <h2 class="text-[28px] md:text-[36px] leading-tight md:leading-[40px] text-[#0a0a0a] max-w-[520px] text-balance mb-4">
+          Every investor workflow, connected and automated.
+        </h2>
+        <p class="text-[16px] md:text-[22px] leading-snug md:leading-[32px] text-[#737373] max-w-[540px] text-balance mb-16">
+          From first inbound email to board seat — Sauna keeps every deal,
+          company, and founder in one living context that works for you.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-[20px]">
+
+          <!-- Card 1 -->
+          <div class="bg-white rounded-[32px] md:rounded-[40px] p-8 flex flex-col gap-6">
+            <div class="w-10 h-10 rounded-[8px] flex items-center justify-center" style="background:rgba(147,239,164,0.15);">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <circle cx="8" cy="8" r="5" stroke="#003116" stroke-width="1.6"/>
+                <path d="M12.5 12.5L17 17" stroke="#003116" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-[18px] leading-snug text-[#0a0a0a] mb-3">Deal intelligence</h3>
+              <p class="text-[16px] leading-[24px] text-[#737373]">
+                Sauna auto-researches every inbound before you open the email. News,
+                funding history, LinkedIn context, Twitter signals — surfaced the moment
+                a founder hits your inbox.
+              </p>
+            </div>
+            <ul class="text-[13px] leading-[20px] text-[#737373] flex flex-col gap-2 mt-auto">
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Auto-brief on every cold email</li>
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Competitor map + funding history</li>
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Founder social graph scan</li>
+            </ul>
+          </div>
+
+          <!-- Card 2 (highlight) -->
+          <div class="bg-[#0a0a0a] rounded-[32px] md:rounded-[40px] p-8 flex flex-col gap-6">
+            <div class="w-10 h-10 rounded-[8px] flex items-center justify-center" style="background:rgba(147,239,164,0.12);">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <rect x="3" y="6" width="14" height="10" rx="2" stroke="#93efa4" stroke-width="1.6"/>
+                <path d="M7 6V5a3 3 0 016 0v1" stroke="#93efa4" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-[18px] leading-snug text-white mb-3">Portfolio command center</h3>
+              <p class="text-[16px] leading-[24px] text-[#737373]">
+                One agent that reads board decks, tracks KPI trends, flags when a
+                portfolio company goes quiet, and drafts the follow-up before you
+                think to send it.
+              </p>
+            </div>
+            <ul class="text-[13px] leading-[20px] text-[#737373] flex flex-col gap-2 mt-auto">
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Monthly update digest, auto-summarized</li>
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Proactive risk flags per company</li>
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Board meeting prep in minutes</li>
+            </ul>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="bg-white rounded-[32px] md:rounded-[40px] p-8 flex flex-col gap-6">
+            <div class="w-10 h-10 rounded-[8px] flex items-center justify-center" style="background:rgba(147,239,164,0.15);">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M10 2a8 8 0 100 16A8 8 0 0010 2z" stroke="#003116" stroke-width="1.6"/>
+                <path d="M10 6v4l3 3" stroke="#003116" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-[18px] leading-snug text-[#0a0a0a] mb-3">LP relationships</h3>
+              <p class="text-[16px] leading-[24px] text-[#737373]">
+                Draft quarterly updates in your voice, keep a living record of every
+                LP conversation, and never lose track of an open ask or commitment.
+              </p>
+            </div>
+            <ul class="text-[13px] leading-[20px] text-[#737373] flex flex-col gap-2 mt-auto">
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Quarterly updates from your notes</li>
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> LP CRM with full meeting history</li>
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Capital call + commitment tracking</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+         HOW IT WORKS
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <section id="how" class="bg-[#faf9f7] py-12 md:py-[120px] px-6 md:px-[80px] rounded-b-[40px] overflow-hidden">
+      <div class="max-w-[1156px] mx-auto">
+        <div class="max-w-[540px] mb-16">
+          <p class="text-[12px] leading-[16px] text-[#a3a3a3] uppercase tracking-[0.1em] mb-4">How it works</p>
+          <h2 class="text-[28px] md:text-[36px] leading-tight md:leading-[40px] text-[#0a0a0a] text-balance mb-4">
+            Connect your stack. Sauna does the rest.
+          </h2>
+          <p class="text-[16px] leading-[24px] text-[#737373]">
+            Three steps from first message to a fully informed investment team.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-[20px] md:gap-[40px]">
+
+          <div class="flex flex-col gap-5">
+            <div class="w-10 h-10 rounded-full bg-[#e9e8e6] flex items-center justify-center text-[14px] font-semibold text-[#171814]">1</div>
+            <div>
+              <h3 class="text-[18px] leading-snug text-[#0a0a0a] mb-2">Connect your tools</h3>
+              <p class="text-[16px] leading-[24px] text-[#737373]">
+                Gmail, Slack, Notion, Google Calendar, Granola, Zoom — one-click auth.
+                Sauna reads your full context without you lifting a finger.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-5">
+            <div class="w-10 h-10 rounded-full bg-[#e9e8e6] flex items-center justify-center text-[14px] font-semibold text-[#171814]">2</div>
+            <div>
+              <h3 class="text-[18px] leading-snug text-[#0a0a0a] mb-2">Ask in plain English</h3>
+              <p class="text-[16px] leading-[24px] text-[#737373]">
+                "What happened with Acme since last month?" "Draft a board brief for Tuesday."
+                "Who haven't we followed up with in 30 days?" Sauna gets it.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-5">
+            <div class="w-10 h-10 rounded-full bg-[#93efa4] flex items-center justify-center text-[14px] font-semibold text-[#003116]">3</div>
+            <div>
+              <h3 class="text-[18px] leading-snug text-[#0a0a0a] mb-2">Get it done, automatically</h3>
+              <p class="text-[16px] leading-[24px] text-[#737373]">
+                Sauna pulls the data, synthesizes across every source, drafts the output,
+                and asks before sending. You review, adjust, ship.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+         FEATURES GRID
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <section id="features" class="bg-[#fafaf9] py-12 md:py-[120px] px-6 md:px-[80px] rounded-b-[40px] overflow-hidden">
+      <div class="max-w-[1156px] mx-auto">
+        <div class="max-w-[540px] mb-16">
+          <p class="text-[12px] leading-[16px] text-[#a3a3a3] uppercase tracking-[0.1em] mb-4">Capabilities</p>
+          <h2 class="text-[28px] md:text-[36px] leading-tight md:leading-[40px] text-[#0a0a0a] text-balance">
+            Every tool an investor wishes they had.
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[20px]">
+
+          <div class="bg-white rounded-[32px] p-8 flex flex-col gap-4">
+            <div class="text-[24px]">🔎</div>
+            <div class="flex-1">
+              <h4 class="text-[16px] leading-snug text-[#0a0a0a] mb-2">Inbound triage</h4>
+              <p class="text-[16px] leading-[24px] text-[#737373]">Auto-score every cold email against your thesis. The right deals rise to the top before you open your inbox.</p>
+            </div>
+            <a href="https://sauna.ai" class="inline-flex items-center justify-center gap-1.5 h-8 px-4 rounded-full bg-[#93efa4] hover:bg-[#7ad895] text-[#003116] text-[12px] leading-[16px] font-medium transition-colors duration-150 w-fit">Try in Sauna →</a>
+          </div>
+
+          <div class="bg-white rounded-[32px] p-8 flex flex-col gap-4">
+            <div class="text-[24px]">📋</div>
+            <div class="flex-1">
+              <h4 class="text-[16px] leading-snug text-[#0a0a0a] mb-2">Memo drafting</h4>
+              <p class="text-[16px] leading-[24px] text-[#737373]">From call notes to investment memo in one command — pulling from every transcript, email thread, and data room doc.</p>
+            </div>
+            <a href="https://sauna.ai" class="inline-flex items-center justify-center gap-1.5 h-8 px-4 rounded-full bg-[#93efa4] hover:bg-[#7ad895] text-[#003116] text-[12px] leading-[16px] font-medium transition-colors duration-150 w-fit">Try in Sauna →</a>
+          </div>
+
+          <div class="bg-white rounded-[32px] p-8 flex flex-col gap-4">
+            <div class="text-[24px]">📡</div>
+            <div class="flex-1">
+              <h4 class="text-[16px] leading-snug text-[#0a0a0a] mb-2">Market monitoring</h4>
+              <p class="text-[16px] leading-[24px] text-[#737373]">Watch a sector, company, or founder. Sauna surfaces news, funding announcements, and hiring signals on your schedule.</p>
+            </div>
+            <a href="https://sauna.ai" class="inline-flex items-center justify-center gap-1.5 h-8 px-4 rounded-full bg-[#93efa4] hover:bg-[#7ad895] text-[#003116] text-[12px] leading-[16px] font-medium transition-colors duration-150 w-fit">Try in Sauna →</a>
+          </div>
+
+          <div class="bg-white rounded-[32px] p-8 flex flex-col gap-4">
+            <div class="text-[24px]">📅</div>
+            <div class="flex-1">
+              <h4 class="text-[16px] leading-snug text-[#0a0a0a] mb-2">Meeting intelligence</h4>
+              <p class="text-[16px] leading-[24px] text-[#737373]">A 2-minute brief before every call. Calendar, prior email threads, past notes, and recent company news — already loaded.</p>
+            </div>
+            <a href="https://sauna.ai" class="inline-flex items-center justify-center gap-1.5 h-8 px-4 rounded-full bg-[#93efa4] hover:bg-[#7ad895] text-[#003116] text-[12px] leading-[16px] font-medium transition-colors duration-150 w-fit">Try in Sauna →</a>
+          </div>
+
+          <div class="bg-white rounded-[32px] p-8 flex flex-col gap-4">
+            <div class="text-[24px]">✍️</div>
+            <div class="flex-1">
+              <h4 class="text-[16px] leading-snug text-[#0a0a0a] mb-2">LP update drafts</h4>
+              <p class="text-[16px] leading-[24px] text-[#737373]">Quarterly updates written in your voice. Pulls portfolio metrics, market context, and prior updates to match your tone exactly.</p>
+            </div>
+            <a href="https://sauna.ai" class="inline-flex items-center justify-center gap-1.5 h-8 px-4 rounded-full bg-[#93efa4] hover:bg-[#7ad895] text-[#003116] text-[12px] leading-[16px] font-medium transition-colors duration-150 w-fit">Try in Sauna →</a>
+          </div>
+
+          <div class="bg-white rounded-[32px] p-8 flex flex-col gap-4">
+            <div class="text-[24px]">🧠</div>
+            <div class="flex-1">
+              <h4 class="text-[16px] leading-snug text-[#0a0a0a] mb-2">Institutional memory</h4>
+              <p class="text-[16px] leading-[24px] text-[#737373]">Every deal, every founder, every thesis — searchable and cross-referenced. Your firm's knowledge compounds forever.</p>
+            </div>
+            <a href="https://sauna.ai" class="inline-flex items-center justify-center gap-1.5 h-8 px-4 rounded-full bg-[#93efa4] hover:bg-[#7ad895] text-[#003116] text-[12px] leading-[16px] font-medium transition-colors duration-150 w-fit">Try in Sauna →</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+         INTEGRATIONS
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <section class="bg-[#faf9f7] py-12 md:py-[80px] px-6 md:px-[80px] rounded-b-[40px] overflow-hidden">
+      <div class="max-w-[1156px] mx-auto text-center">
+        <p class="text-[12px] leading-[16px] text-[#a3a3a3] uppercase tracking-[0.1em] mb-8">Connects to your whole stack</p>
+        <div class="flex flex-wrap justify-center gap-[12px] max-w-[860px] mx-auto">
+          <!-- Gmail -->
+          <span class="inline-flex items-center gap-2 text-[13px] leading-[20px] text-[#404040] bg-white border border-[#e9e8e6] rounded-full pl-2 pr-4 py-1.5">
+            <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="24" fill="#EA4335"/><path d="M10 14h28l-14 10L10 14z" fill="white"/><path d="M10 14v20h28V14L24 24 10 14z" fill="white" fill-opacity="0.2"/><path d="M10 14v20h8V21l6 5 6-5v13h8V14L24 24 10 14z" fill="white"/></svg>
+            Gmail
+          </span>
+          <!-- Google Calendar -->
+          <span class="inline-flex items-center gap-2 text-[13px] leading-[20px] text-[#404040] bg-white border border-[#e9e8e6] rounded-full pl-2 pr-4 py-1.5">
+            <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="24" fill="#1A73E8"/><rect x="12" y="14" width="24" height="22" rx="2" fill="white"/><rect x="12" y="14" width="24" height="8" fill="#1A73E8"/><rect x="18" y="10" width="3" height="7" rx="1.5" fill="#1A73E8"/><rect x="27" y="10" width="3" height="7" rx="1.5" fill="#1A73E8"/><rect x="16" y="26" width="6" height="6" rx="1" fill="#EA4335"/></svg>
+            Google Calendar
+          </span>
+          <!-- Slack -->
+          <span class="inline-flex items-center gap-2 text-[13px] leading-[20px] text-[#404040] bg-white border border-[#e9e8e6] rounded-full pl-2 pr-4 py-1.5">
+            <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="24" fill="#4A154B"/><path d="M18 14a4 4 0 000 8h4v-4a4 4 0 00-4-4z" fill="#E01E5A"/><path d="M14 26a4 4 0 008 0v-4H18a4 4 0 00-4 4z" fill="#E01E5A"/><path d="M30 34a4 4 0 000-8h-4v4a4 4 0 004 4z" fill="#2EB67D"/><path d="M34 22a4 4 0 00-8 0v4h4a4 4 0 004-4z" fill="#2EB67D"/><path d="M14 22a4 4 0 008 0v-4h-4a4 4 0 00-4 4z" fill="#36C5F0"/><path d="M26 14a4 4 0 000 8h4v-4a4 4 0 00-4-4z" fill="#36C5F0"/><path d="M34 26a4 4 0 00-8 0v4h4a4 4 0 004-4z" fill="#ECB22E"/><path d="M22 34a4 4 0 000-8h-4v4a4 4 0 004 4z" fill="#ECB22E"/></svg>
+            Slack
+          </span>
+          <!-- Notion -->
+          <span class="inline-flex items-center gap-2 text-[13px] leading-[20px] text-[#404040] bg-white border border-[#e9e8e6] rounded-full pl-2 pr-4 py-1.5">
+            <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="24" fill="#F7F6F3"/><path d="M16 12h12l8 8v20H16V12z" fill="#F7F6F3" stroke="#171814" stroke-width="2"/><path d="M28 12v8h8" stroke="#171814" stroke-width="2" stroke-linejoin="round"/><path d="M20 24h8M20 29h8M20 34h5" stroke="#171814" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Notion
+          </span>
+          <!-- Granola -->
+          <span class="inline-flex items-center gap-2 text-[13px] leading-[20px] text-[#404040] bg-white border border-[#e9e8e6] rounded-full pl-2 pr-4 py-1.5">
+            <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="24" fill="#1A1A1A"/><circle cx="24" cy="24" r="8" fill="#93efa4"/><circle cx="24" cy="24" r="3" fill="#1A1A1A"/></svg>
+            Granola
+          </span>
+          <!-- Zoom -->
+          <span class="inline-flex items-center gap-2 text-[13px] leading-[20px] text-[#404040] bg-white border border-[#e9e8e6] rounded-full pl-2 pr-4 py-1.5">
+            <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="24" fill="#2D8CFF"/><rect x="10" y="17" width="20" height="14" rx="3" fill="white"/><path d="M30 21l8-5v16l-8-5V21z" fill="white"/></svg>
+            Zoom
+          </span>
+          <!-- Fireflies -->
+          <span class="inline-flex items-center gap-2 text-[13px] leading-[20px] text-[#404040] bg-white border border-[#e9e8e6] rounded-full pl-2 pr-4 py-1.5">
+            <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="24" fill="#FF6B35"/><path d="M24 10c0 0-8 8-8 16a8 8 0 0016 0c0-3-2-6-4-8 0 4-2 6-4 8-2-4 0-8 0-16z" fill="white"/></svg>
+            Fireflies
+          </span>
+          <!-- LinkedIn -->
+          <span class="inline-flex items-center gap-2 text-[13px] leading-[20px] text-[#404040] bg-white border border-[#e9e8e6] rounded-full pl-2 pr-4 py-1.5">
+            <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="24" fill="#0A66C2"/><rect x="12" y="20" width="7" height="18" fill="white"/><circle cx="15.5" cy="14.5" r="3.5" fill="white"/><path d="M23 20h6.5c3.5 0 6.5 2.5 6.5 6v12H29V27c0-1.7-1.3-3-3-3s-3 1.3-3 3v11h-7V20h7z" fill="white"/></svg>
+            LinkedIn
+          </span>
+          <!-- Twitter / X -->
+          <span class="inline-flex items-center gap-2 text-[13px] leading-[20px] text-[#404040] bg-white border border-[#e9e8e6] rounded-full pl-2 pr-4 py-1.5">
+            <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="24" fill="#000"/><path d="M11 11l10.5 14L11 37h4l8-9 7 9h9L28 22l10-11h-4l-7.5 8.5L19 11H11z" fill="white"/></svg>
+            Twitter / X
+          </span>
+          <!-- Crunchbase -->
+          <span class="inline-flex items-center gap-2 text-[13px] leading-[20px] text-[#404040] bg-white border border-[#e9e8e6] rounded-full pl-2 pr-4 py-1.5">
+            <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="24" fill="#0288D1"/><text x="10" y="32" font-family="Arial" font-size="20" font-weight="bold" fill="white">CB</text></svg>
+            Crunchbase
+          </span>
+          <!-- Pitchbook -->
+          <span class="inline-flex items-center gap-2 text-[13px] leading-[20px] text-[#404040] bg-white border border-[#e9e8e6] rounded-full pl-2 pr-4 py-1.5">
+            <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="24" fill="#004F2D"/><path d="M14 34V18h8a8 8 0 010 16H14z" fill="white"/><path d="M22 22v8h4a4 4 0 000-8h-4z" fill="#004F2D"/></svg>
+            Pitchbook
+          </span>
+          <!-- Airtable -->
+          <span class="inline-flex items-center gap-2 text-[13px] leading-[20px] text-[#404040] bg-white border border-[#e9e8e6] rounded-full pl-2 pr-4 py-1.5">
+            <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="24" fill="#FCB400"/><path d="M24 10l12 6v8l-12 6-12-6v-8l12-6z" fill="white"/><path d="M24 24v14l12-6v-8l-12 6v-6z" fill="white" fill-opacity="0.5"/><path d="M24 24v14L12 32v-8l12 6v-6z" fill="white" fill-opacity="0.3"/></svg>
+            Airtable
+          </span>
+          <!-- iMessage -->
+          <span class="inline-flex items-center gap-2 text-[13px] leading-[20px] text-[#404040] bg-white border border-[#e9e8e6] rounded-full pl-2 pr-4 py-1.5">
+            <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="24" fill="#34C759"/><path d="M24 12c-7 0-13 5-13 11 0 3 1.5 5.5 4 7.5L13 36l7-3c1.3.3 2.6.5 4 .5 7 0 13-5 13-11s-6-10.5-13-10.5z" fill="white"/></svg>
+            iMessage
+          </span>
+          <!-- WhatsApp -->
+          <span class="inline-flex items-center gap-2 text-[13px] leading-[20px] text-[#404040] bg-white border border-[#e9e8e6] rounded-full pl-2 pr-4 py-1.5">
+            <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="24" fill="#25D366"/><path d="M24 11c-7.2 0-13 5.8-13 13 0 2.4.7 4.7 1.9 6.7L11 37l6.5-1.7c1.9 1 4 1.7 6.5 1.7 7.2 0 13-5.8 13-13s-5.8-13-13-13z" fill="white"/><path d="M30 26.5c-.3-.7-1.5-1.3-2-1.5-.5-.2-1-.2-1.4.2-.4.3-.8.9-1 1.1-.2.2-.4.2-.7.1-1.3-.5-2.3-1.3-3.2-2.4-.5-.6-.9-1.3-.9-1.5 0-.2.2-.4.3-.6.1-.2.3-.4.4-.6.1-.2.1-.4 0-.6L20 18c-.3-.7-.7-.9-1-.9-.3 0-.6 0-.9 0-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.3s1.4 3.8 1.6 4.1c.2.3 2.7 4.4 6.7 6 3.2 1.3 3.9.9 4.6.9.7 0 2.3-.9 2.6-1.8.3-.9.3-1.7.2-1.6z" fill="#25D366"/></svg>
+            WhatsApp
+          </span>
+          <span class="inline-flex items-center gap-2 text-[13px] leading-[20px] text-[#93efa4] bg-[#fafaf9] border border-[#93efa4] rounded-full px-4 py-1.5">+ 200 more</span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+         TESTIMONIALS
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <section class="bg-[#fafaf9] py-12 md:py-[120px] px-6 md:px-[80px] rounded-b-[40px] overflow-hidden">
+      <div class="max-w-[1156px] mx-auto">
+        <div class="max-w-[540px] mb-16">
+          <p class="text-[12px] leading-[16px] text-[#a3a3a3] uppercase tracking-[0.1em] mb-4">What investors say</p>
+          <h2 class="text-[28px] md:text-[36px] leading-tight md:leading-[40px] text-[#0a0a0a] text-balance">
+            The best investors hate wasted context.
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-[20px]">
+
+          <div class="bg-white rounded-[32px] p-8">
+            <p class="text-[16px] leading-[24px] text-[#171814] mb-6">
+              "I used to spend 30 minutes before every partner meeting pulling context from five different places.
+              Sauna does it in two minutes and doesn't miss anything."
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-[#e9e8e6] flex items-center justify-center text-[12px] font-semibold text-[#737373]">SL</div>
+              <div>
+                <div class="text-[13px] leading-[20px] text-[#171814]">Sarah L.</div>
+                <div class="text-[12px] leading-[16px] text-[#a3a3a3]">Partner, early-stage fund</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-[#0a0a0a] rounded-[32px] p-8">
+            <p class="text-[16px] leading-[24px] text-[#d1cecc] mb-6">
+              "Our LP updates used to take a full day. Now I give Sauna the raw notes and it drafts the whole
+              thing in my voice. I spend 20 minutes editing. LPs think I worked all weekend."
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-[#404040] flex items-center justify-center text-[12px] font-semibold text-[#a3a3a3]">MR</div>
+              <div>
+                <div class="text-[13px] leading-[20px] text-white">Marcus R.</div>
+                <div class="text-[12px] leading-[16px] text-[#737373]">Managing Partner, $200M fund</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-[32px] p-8">
+            <p class="text-[16px] leading-[24px] text-[#171814] mb-6">
+              "The inbound triage alone saves me an hour a day. The deals I actually want to see are at the top.
+              The noise is gone. I don't know how I did this before."
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-[#e9e8e6] flex items-center justify-center text-[12px] font-semibold text-[#737373]">AK</div>
+              <div>
+                <div class="text-[13px] leading-[20px] text-[#171814]">Aiko K.</div>
+                <div class="text-[12px] leading-[16px] text-[#a3a3a3]">Principal, growth equity</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+         PRICING
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <section id="pricing" class="bg-[#faf9f7] py-12 md:py-[120px] px-6 md:px-[80px] rounded-b-[40px] overflow-hidden">
+      <div class="max-w-[1156px] mx-auto">
+        <div class="max-w-[540px] mb-16">
+          <p class="text-[12px] leading-[16px] text-[#a3a3a3] uppercase tracking-[0.1em] mb-4">Pricing</p>
+          <h2 class="text-[28px] md:text-[36px] leading-tight md:leading-[40px] text-[#0a0a0a] text-balance mb-4">
+            Simple, flat pricing.
+          </h2>
+          <p class="text-[16px] leading-[24px] text-[#737373]">
+            No per-seat gotchas. No usage limits that punish deep research.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-[20px] max-w-[860px]">
+
+          <div class="bg-white rounded-[32px] p-8 flex flex-col gap-6">
+            <div>
+              <div class="text-[12px] leading-[16px] text-[#a3a3a3] uppercase tracking-[0.1em] mb-3">Basic</div>
+              <div class="text-[40px] leading-none font-semibold text-[#0a0a0a] mb-1">$49<span class="text-[16px] leading-[24px] font-medium text-[#737373]">/mo</span></div>
+              <div class="text-[13px] leading-[20px] text-[#a3a3a3]">Solo investor or scout</div>
+            </div>
+            <ul class="text-[13px] leading-[20px] text-[#737373] flex flex-col gap-3 flex-1">
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> 5 connected tools</li>
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Deal research and briefs</li>
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Email and calendar context</li>
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> 250K context credits/mo</li>
+            </ul>
+            <a
+              href="https://sauna.ai"
+              class="inline-flex items-center justify-center h-11 w-full rounded-full border border-[#e9e8e6] text-[#171814] text-[14px] leading-[20px] font-medium hover:bg-[#fafaf9] transition-colors duration-150"
+            >
+              Get started
+            </a>
+          </div>
+
+          <div class="bg-[#0a0a0a] rounded-[32px] p-8 flex flex-col gap-6">
+            <div>
+              <div class="text-[12px] leading-[16px] uppercase tracking-[0.1em] mb-3" style="color:#93efa4;">Pro</div>
+              <div class="text-[40px] leading-none font-semibold text-white mb-1">$149<span class="text-[16px] leading-[24px] font-medium text-[#737373]">/mo</span></div>
+              <div class="text-[13px] leading-[20px] text-[#737373]">Partner or principal</div>
+            </div>
+            <ul class="text-[13px] leading-[20px] text-[#737373] flex flex-col gap-3 flex-1">
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Unlimited tool connections</li>
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Portfolio monitoring and alerts</li>
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> LP draft engine</li>
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Scheduled research runs</li>
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> 1M context credits/mo</li>
+            </ul>
+            <a
+              href="https://sauna.ai"
+              class="inline-flex items-center justify-center h-11 w-full px-4 rounded-full bg-[#93efa4] hover:bg-[#7ad895] text-[#003116] text-[14px] leading-[20px] font-medium transition-colors duration-150"
+            >
+              Get started
+            </a>
+          </div>
+
+          <div class="bg-white rounded-[32px] p-8 flex flex-col gap-6">
+            <div>
+              <div class="text-[12px] leading-[16px] text-[#a3a3a3] uppercase tracking-[0.1em] mb-3">Team</div>
+              <div class="text-[40px] leading-none font-semibold text-[#0a0a0a] mb-1">$399<span class="text-[16px] leading-[24px] font-medium text-[#737373]">/mo</span></div>
+              <div class="text-[13px] leading-[20px] text-[#a3a3a3]">Full partnership team</div>
+            </div>
+            <ul class="text-[13px] leading-[20px] text-[#737373] flex flex-col gap-3 flex-1">
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Up to 10 team members</li>
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Shared brain and permissions</li>
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Firm-wide deal database</li>
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Priority support</li>
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Unlimited credits</li>
+            </ul>
+            <a
+              href="https://sauna.ai"
+              class="inline-flex items-center justify-center h-11 w-full rounded-full border border-[#e9e8e6] text-[#171814] text-[14px] leading-[20px] font-medium hover:bg-[#fafaf9] transition-colors duration-150"
+            >
+              Contact us
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+         FINAL CTA (white card on warm desk)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <section
+      class="relative w-full p-4 md:p-[40px] rounded-b-[40px] overflow-hidden"
+      style="background: linear-gradient(160deg, #2a1206 0%, #4a1e0a 28%, #623328 58%, #3a1508 100%);"
+    >
+      <div class="bg-white flex flex-col items-center justify-center min-h-[280px] md:min-h-[320px] rounded-[32px] md:rounded-[40px] overflow-hidden">
+        <div class="flex flex-col items-center justify-center gap-6 md:gap-8 p-8 md:p-[80px] text-center">
+          <h2 class="text-[#0a0a0a] text-[28px] md:text-[36px] leading-tight md:leading-[40px] font-medium max-w-[442px] text-balance">
+            C'mon in, Sauna's hot.
+          </h2>
+          <p class="text-[16px] leading-[24px] text-[#737373] max-w-[380px] text-balance">
+            The best investors make fast decisions because they never lose context.
+            Sauna is how you build that edge.
+          </p>
+          <a
+            href="https://sauna.ai"
+            class="inline-flex items-center justify-center h-11 w-[200px] px-4 rounded-full bg-[#93efa4] hover:bg-[#7ad895] text-[#003116] text-[14px] leading-[20px] font-medium transition-colors duration-150"
+          >
+            Get started for free
+          </a>
+          <p class="text-[12px] leading-[16px] text-[#a3a3a3]">No credit card required · 14-day free trial</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+         FOOTER
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <footer class="bg-[#fafaf9] border-t border-[#e9e8e6] py-10 px-6 md:px-[80px] flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <svg width="20" height="20" viewBox="0 0 28 28" fill="none">
+          <rect width="28" height="28" rx="7" fill="#93efa4"/>
+          <path d="M8 14C8 10.686 10.686 8 14 8s6 2.686 6 6-2.686 6-6 6" stroke="#003116" stroke-width="2.2" stroke-linecap="round"/>
+          <circle cx="14" cy="14" r="2.2" fill="#003116"/>
+        </svg>
+        <span class="text-[14px] leading-[20px] font-medium text-[#171814]">Sauna</span>
+      </div>
+      <p class="text-[12px] leading-[16px] text-[#a3a3a3]">
+        © 2026 HeyDaily Inc. ·
+        <a href="https://sauna.ai/privacy" class="hover:text-[#737373] transition-opacity">Privacy</a> ·
+        <a href="https://sauna.ai/terms" class="hover:text-[#737373] transition-opacity">Terms</a>
+      </p>
+      <div class="flex items-center gap-6">
+        <a href="https://twitter.com/saunai_" class="text-[12px] leading-[16px] text-[#a3a3a3] hover:opacity-80 transition-opacity">Twitter</a>
+        <a href="https://linkedin.com/company/saunaai" class="text-[12px] leading-[16px] text-[#a3a3a3] hover:opacity-80 transition-opacity">LinkedIn</a>
+      </div>
+    </footer>
+
+  </body>
+</html>
