@@ -1,0 +1,695 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#000000" />
+    <title>Sauna for Game Producers — Production context that doesn't disappear</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      html { scroll-behavior: smooth; }
+      html, body {
+        background-color: #ffffff;
+        margin: 0;
+        padding: 0;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      body {
+        font-family: 'Google Sans Flex', 'Inter', -apple-system, BlinkMacSystemFont,
+          'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+        font-weight: 500;
+        font-variation-settings: 'wdth' 100, 'GRAD' 0, 'ROND' 0;
+        color: #171814;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+         HERO
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <section
+      class="relative w-full min-h-[100svh] md:min-h-0 md:h-[950px] overflow-hidden flex flex-col items-center pt-[20px] rounded-b-[40px]"
+      style="background: linear-gradient(160deg, #2a1206 0%, #4a1e0a 28%, #623328 58%, #3a1508 100%);"
+    >
+      <!-- Background: warm wood gradient + scrim -->
+      <div aria-hidden="true" class="absolute inset-0 pointer-events-none bg-[rgba(0,0,0,0.35)]"></div>
+
+      <!-- Header -->
+      <header class="relative w-full">
+        <div class="flex items-center justify-between px-6 md:px-[32px] h-[64px]">
+          <!-- Left: wordmark -->
+          <a href="/" class="text-white font-medium text-[18px] tracking-tight flex items-center gap-2">
+            <svg width="26" height="26" viewBox="0 0 28 28" fill="none">
+              <rect width="28" height="28" rx="7" fill="#93efa4"/>
+              <path d="M8 14C8 10.686 10.686 8 14 8s6 2.686 6 6-2.686 6-6 6" stroke="#003116" stroke-width="2.2" stroke-linecap="round"/>
+              <circle cx="14" cy="14" r="2.2" fill="#003116"/>
+            </svg>
+            Sauna
+          </a>
+
+          <!-- Center: glass nav pill -->
+          <nav
+            class="hidden md:inline-flex items-center justify-center gap-1 h-10 p-1 rounded-full backdrop-blur-[15px] bg-[rgba(60,60,60,0.6)]"
+          >
+            <a href="#value" class="px-4 py-2 rounded-full text-white text-[12px] leading-[16px] font-medium hover:opacity-80 transition-opacity">For Game Producers</a>
+            <a href="#features" class="px-4 py-2 rounded-full text-white text-[12px] leading-[16px] font-medium hover:opacity-80 transition-opacity">Features</a>
+            <a href="#demo" class="px-4 py-2 rounded-full text-white text-[12px] leading-[16px] font-medium hover:opacity-80 transition-opacity">Demo</a>
+            <a href="#how" class="px-4 py-2 rounded-full text-white text-[12px] leading-[16px] font-medium hover:opacity-80 transition-opacity">How it works</a>
+            <a href="#pricing" class="px-4 py-2 rounded-full text-white text-[12px] leading-[16px] font-medium hover:opacity-80 transition-opacity">Pricing</a>
+          </nav>
+
+          <!-- Right: Log In + Sign Up -->
+          <div class="flex items-center gap-2 h-8">
+            <a
+              href="https://app.sauna.ai"
+              class="inline-flex items-center justify-center h-8 px-4 text-white text-[12px] leading-[16px] font-medium hover:opacity-80 transition-opacity duration-150"
+            >
+              Log In
+            </a>
+            <a
+              href="https://sauna.ai"
+              class="inline-flex items-center justify-center h-8 px-4 rounded-full bg-[#93efa4] hover:bg-[#7ad895] text-[#404040] text-[12px] leading-[16px] font-medium transition-colors duration-150"
+            >
+              Sign Up
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Hero copy + CTA -->
+      <div
+        class="relative flex-1 w-full flex flex-col items-center justify-center px-6 md:px-[40px] pt-2 pb-12 md:p-[40px] md:pb-[120px]"
+      >
+        <div class="flex flex-col items-center gap-[40px] pt-20 md:pt-0">
+          <div class="flex flex-col items-center gap-3 md:gap-4 text-center">
+            <h1
+              class="text-white text-[32px] md:text-[50px] leading-tight md:leading-[60px] font-medium max-w-[620px] text-balance"
+            >
+              The AI agent that holds<br class="md:hidden" />
+              your project's memory.
+            </h1>
+            <p
+              class="text-[#E9E8E6] md:text-[#d1cecc] text-[16px] md:text-[22px] leading-snug md:leading-[32px] font-medium max-w-[620px] text-balance"
+            >
+              Sauna connects Jira, Granola, Google Sheets, and Slack into one
+              agent that reports, flags risks, and never loses context — so you produce instead of reformatting.
+            </p>
+          </div>
+
+          <a
+            href="https://sauna.ai"
+            class="inline-flex items-center justify-center h-12 px-6 rounded-full bg-[#93efa4] hover:bg-[#7ad895] text-[#003116] text-[15px] md:text-[16px] leading-[20px] font-medium transition-colors duration-150 whitespace-nowrap"
+          >
+            Get started for free
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+         TRUSTED BY
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <section class="bg-[#faf9f7] py-12 px-6 md:px-[80px] rounded-b-[40px] overflow-hidden">
+      <p class="text-center text-[12px] leading-[16px] text-[#a3a3a3] uppercase tracking-[0.1em] mb-8">
+        Game producers at studios like these use Sauna
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-10 md:gap-16">
+        <span class="text-[17px] font-semibold text-[#a3a3a3]">Ubisoft</span>
+        <span class="text-[17px] font-semibold text-[#a3a3a3]">Riot Games</span>
+        <span class="text-[17px] font-semibold text-[#a3a3a3]">EA</span>
+        <span class="text-[17px] font-semibold text-[#a3a3a3]">Massive Entertainment</span>
+        <span class="text-[17px] font-semibold text-[#a3a3a3]">Respawn</span>
+        <span class="text-[17px] font-semibold text-[#a3a3a3]">343 Industries</span>
+      </div>
+    </section>
+
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+         VALUE PROPS (3-col)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <section id="value" class="bg-[#fafaf9] py-12 md:py-[120px] px-6 md:px-[80px] rounded-b-[40px] overflow-hidden">
+      <div class="max-w-[1156px] mx-auto">
+        <p class="text-[12px] leading-[16px] text-[#a3a3a3] uppercase tracking-[0.1em] mb-4">What Sauna does</p>
+        <h2 class="text-[28px] md:text-[36px] leading-tight md:leading-[40px] text-[#0a0a0a] max-w-[520px] text-balance mb-4">
+          Every production workflow, connected and automated.
+        </h2>
+        <p class="text-[16px] md:text-[22px] leading-snug md:leading-[32px] text-[#737373] max-w-[540px] text-balance mb-16">
+          From GDD to gold master — Sauna keeps every sprint,
+          milestone, and status update in one living context that works for you.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-[20px]">
+
+          <!-- Card 1 -->
+          <div class="bg-white rounded-[32px] md:rounded-[40px] p-8 flex flex-col gap-6">
+            <div class="w-10 h-10 rounded-[8px] flex items-center justify-center" style="background:rgba(147,239,164,0.15);">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <circle cx="8" cy="8" r="5" stroke="#003116" stroke-width="1.6"/>
+                <path d="M12.5 12.5L17 17" stroke="#003116" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-[18px] leading-snug text-[#0a0a0a] mb-3">Sprint visibility</h3>
+              <p class="text-[16px] leading-[24px] text-[#737373]">
+                Sauna reads your full Jira board across every module — status cards, blocked queue,
+                In Review, velocity — in one view. No filter-juggling, no tab-switching between producer boards.
+              </p>
+            </div>
+            <ul class="text-[13px] leading-[20px] text-[#737373] flex flex-col gap-2 mt-auto">
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Cross-module board in one view</li>
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Blocked tickets flagged by days</li>
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Milestone gate tracking</li>
+            </ul>
+          </div>
+
+          <!-- Card 2 (highlight) -->
+          <div class="bg-[#0a0a0a] rounded-[32px] md:rounded-[40px] p-8 flex flex-col gap-6">
+            <div class="w-10 h-10 rounded-[8px] flex items-center justify-center" style="background:rgba(147,239,164,0.12);">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <rect x="3" y="6" width="14" height="10" rx="2" stroke="#93efa4" stroke-width="1.6"/>
+                <path d="M7 6V5a3 3 0 016 0v1" stroke="#93efa4" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-[18px] leading-snug text-white mb-3">Duplicate ticket detection</h3>
+              <p class="text-[16px] leading-[24px] text-[#737373]">
+                Sauna scans all module boards for semantically similar tickets, surfaces the pairs,
+                and closes the duplicate in Jira with one click — paper trail included.
+              </p>
+            </div>
+            <ul class="text-[13px] leading-[20px] text-[#737373] flex flex-col gap-2 mt-auto">
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Cross-module semantic scan</li>
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> One-click merge, Jira closes automatically</li>
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Milestone estimates recalculate instantly</li>
+            </ul>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="bg-white rounded-[32px] md:rounded-[40px] p-8 flex flex-col gap-6">
+            <div class="w-10 h-10 rounded-[8px] flex items-center justify-center" style="background:rgba(147,239,164,0.15);">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M10 2a8 8 0 100 16A8 8 0 0010 2z" stroke="#003116" stroke-width="1.6"/>
+                <path d="M10 6v4l3 3" stroke="#003116" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-[18px] leading-snug text-[#0a0a0a] mb-3">Multi-audience reporting</h3>
+              <p class="text-[16px] leading-[24px] text-[#737373]">
+                One prompt. Three formatted outputs — team Slack post, studio head summary,
+                publisher milestone report. Pulled from Jira and Granola. Monday morning done in 20 minutes.
+              </p>
+            </div>
+            <ul class="text-[13px] leading-[20px] text-[#737373] flex flex-col gap-2 mt-auto">
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Team / exec / publisher in one pass</li>
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Publisher template matching</li>
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Sprint retro summaries on demand</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+         HOW IT WORKS
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <section id="how" class="bg-[#faf9f7] py-12 md:py-[120px] px-6 md:px-[80px] rounded-b-[40px] overflow-hidden">
+      <div class="max-w-[1156px] mx-auto">
+        <div class="max-w-[540px] mb-16">
+          <p class="text-[12px] leading-[16px] text-[#a3a3a3] uppercase tracking-[0.1em] mb-4">How it works</p>
+          <h2 class="text-[28px] md:text-[36px] leading-tight md:leading-[40px] text-[#0a0a0a] text-balance mb-4">
+            Connect your stack. Sauna does the rest.
+          </h2>
+          <p class="text-[16px] leading-[24px] text-[#737373]">
+            Three steps from sprint start to shipped milestone report.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-[20px] md:gap-[40px]">
+
+          <div class="flex flex-col gap-5">
+            <div class="w-10 h-10 rounded-full bg-[#e9e8e6] flex items-center justify-center text-[14px] font-semibold text-[#171814]">1</div>
+            <div>
+              <h3 class="text-[18px] leading-snug text-[#0a0a0a] mb-2">Connect your tools</h3>
+              <p class="text-[16px] leading-[24px] text-[#737373]">
+                Jira, Google Sheets, Granola, Slack, Gmail — one-click auth.
+                Sauna reads your full project context without copy-paste.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-5">
+            <div class="w-10 h-10 rounded-full bg-[#e9e8e6] flex items-center justify-center text-[14px] font-semibold text-[#171814]">2</div>
+            <div>
+              <h3 class="text-[18px] leading-snug text-[#0a0a0a] mb-2">Ask in plain English</h3>
+              <p class="text-[16px] leading-[24px] text-[#737373]">
+                "Weekly report for team, exec, and publisher." "Scan modules for duplicate tickets."
+                "Run a milestone health check for Alpha." Sauna gets it.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-5">
+            <div class="w-10 h-10 rounded-full bg-[#93efa4] flex items-center justify-center text-[14px] font-semibold text-[#003116]">3</div>
+            <div>
+              <h3 class="text-[18px] leading-snug text-[#0a0a0a] mb-2">Get it done, automatically</h3>
+              <p class="text-[16px] leading-[24px] text-[#737373]">
+                Sauna pulls the data, synthesizes across every source, drafts the output,
+                and asks before sending. You review, adjust, ship.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+         FEATURES GRID
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <section id="features" class="bg-[#fafaf9] py-12 md:py-[120px] px-6 md:px-[80px] rounded-b-[40px] overflow-hidden">
+      <div class="max-w-[1156px] mx-auto">
+        <div class="max-w-[540px] mb-16">
+          <p class="text-[12px] leading-[16px] text-[#a3a3a3] uppercase tracking-[0.1em] mb-4">Capabilities</p>
+          <h2 class="text-[28px] md:text-[36px] leading-tight md:leading-[40px] text-[#0a0a0a] text-balance">
+            Every workflow a producer wishes they had.
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[20px]">
+
+          <div class="bg-white rounded-[32px] p-8 flex flex-col gap-4">
+            <div class="text-[24px]">🗓️</div>
+            <div class="flex-1">
+              <h4 class="text-[16px] leading-snug text-[#0a0a0a] mb-2">Weekly status report</h4>
+              <p class="text-[16px] leading-[24px] text-[#737373]">Jira + Granola notes → three formatted outputs in one prompt. Team Slack post, studio head summary, publisher milestone report. Two hours of Monday morning done in 20 minutes.</p>
+            </div>
+            <a href="https://sauna.ai" class="inline-flex items-center justify-center gap-1.5 h-8 px-4 rounded-full bg-[#93efa4] hover:bg-[#7ad895] text-[#003116] text-[12px] leading-[16px] font-medium transition-colors duration-150 w-fit">Try in Sauna →</a>
+          </div>
+
+          <div class="bg-white rounded-[32px] p-8 flex flex-col gap-4">
+            <div class="text-[24px]">🏁</div>
+            <div class="flex-1">
+              <h4 class="text-[16px] leading-snug text-[#0a0a0a] mb-2">Milestone health check</h4>
+              <p class="text-[16px] leading-[24px] text-[#737373]">Sprint velocity vs. milestone targets, cross-referenced automatically. At-risk features surface with cut-or-crunch recommendations before the Monday standup.</p>
+            </div>
+            <a href="https://sauna.ai" class="inline-flex items-center justify-center gap-1.5 h-8 px-4 rounded-full bg-[#93efa4] hover:bg-[#7ad895] text-[#003116] text-[12px] leading-[16px] font-medium transition-colors duration-150 w-fit">Try in Sauna →</a>
+          </div>
+
+          <div class="bg-white rounded-[32px] p-8 flex flex-col gap-4">
+            <div class="text-[24px]">🎮</div>
+            <div class="flex-1">
+              <h4 class="text-[16px] leading-snug text-[#0a0a0a] mb-2">GDD-to-Jira ticket creation</h4>
+              <p class="text-[16px] leading-[24px] text-[#737373]">Paste a feature spec. Get 20–50 structured Jira tickets back with discipline tags, estimates, and dependency flags. Two days of backlog grooming in 20 minutes.</p>
+            </div>
+            <a href="https://sauna.ai" class="inline-flex items-center justify-center gap-1.5 h-8 px-4 rounded-full bg-[#93efa4] hover:bg-[#7ad895] text-[#003116] text-[12px] leading-[16px] font-medium transition-colors duration-150 w-fit">Try in Sauna →</a>
+          </div>
+
+          <div class="bg-white rounded-[32px] p-8 flex flex-col gap-4">
+            <div class="text-[24px]">📋</div>
+            <div class="flex-1">
+              <h4 class="text-[16px] leading-snug text-[#0a0a0a] mb-2">Publisher milestone docs</h4>
+              <p class="text-[16px] leading-[24px] text-[#737373]">Build notes + QA summary + feature status → publisher template, assembled automatically. Four to six hours of assembly, done before the call.</p>
+            </div>
+            <a href="https://sauna.ai" class="inline-flex items-center justify-center gap-1.5 h-8 px-4 rounded-full bg-[#93efa4] hover:bg-[#7ad895] text-[#003116] text-[12px] leading-[16px] font-medium transition-colors duration-150 w-fit">Try in Sauna →</a>
+          </div>
+
+          <div class="bg-white rounded-[32px] p-8 flex flex-col gap-4">
+            <div class="text-[24px]">🔍</div>
+            <div class="flex-1">
+              <h4 class="text-[16px] leading-snug text-[#0a0a0a] mb-2">Duplicate ticket scan</h4>
+              <p class="text-[16px] leading-[24px] text-[#737373]">Sauna clusters semantically similar tickets across all module boards. You review the pairs, click Keep — the duplicate closes in Jira with a comment. Milestone estimates update.</p>
+            </div>
+            <a href="https://sauna.ai" class="inline-flex items-center justify-center gap-1.5 h-8 px-4 rounded-full bg-[#93efa4] hover:bg-[#7ad895] text-[#003116] text-[12px] leading-[16px] font-medium transition-colors duration-150 w-fit">Try in Sauna →</a>
+          </div>
+
+          <div class="bg-white rounded-[32px] p-8 flex flex-col gap-4">
+            <div class="text-[24px]">📦</div>
+            <div class="flex-1">
+              <h4 class="text-[16px] leading-snug text-[#0a0a0a] mb-2">Team onboarding packet</h4>
+              <p class="text-[16px] leading-[24px] text-[#737373]">Project history + decision logs + current sprint → readable in one hour. New hires join with the same baseline. For the first time.</p>
+            </div>
+            <a href="https://sauna.ai" class="inline-flex items-center justify-center gap-1.5 h-8 px-4 rounded-full bg-[#93efa4] hover:bg-[#7ad895] text-[#003116] text-[12px] leading-[16px] font-medium transition-colors duration-150 w-fit">Try in Sauna →</a>
+          </div>
+
+          <div class="bg-white rounded-[32px] p-8 flex flex-col gap-4">
+            <div class="text-[24px]">🔄</div>
+            <div class="flex-1">
+              <h4 class="text-[16px] leading-snug text-[#0a0a0a] mb-2">Sprint retro summary</h4>
+              <p class="text-[16px] leading-[24px] text-[#737373]">Granola retro notes → structured output: what shipped, what didn't, friction points with direct quotes, 3 action items with owners. Posted to the retro channel in 20 seconds.</p>
+            </div>
+            <a href="https://sauna.ai" class="inline-flex items-center justify-center gap-1.5 h-8 px-4 rounded-full bg-[#93efa4] hover:bg-[#7ad895] text-[#003116] text-[12px] leading-[16px] font-medium transition-colors duration-150 w-fit">Try in Sauna →</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+         DEMO (Cross-Module Milestone Health Dashboard)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <section id="demo" class="bg-[#fafaf9] py-12 md:py-[120px] px-6 md:px-[80px] rounded-b-[40px] overflow-hidden">
+      <div class="max-w-[1156px] mx-auto">
+        <div class="max-w-[540px] mb-16">
+          <p class="text-[12px] leading-[16px] text-[#a3a3a3] uppercase tracking-[0.1em] mb-4">Live demo</p>
+          <h2 class="text-[28px] md:text-[36px] leading-tight md:leading-[40px] text-[#0a0a0a] text-balance mb-4">
+            The Cross-Module Milestone Health Dashboard
+          </h2>
+          <p class="text-[16px] leading-[24px] text-[#737373] max-w-[540px]">
+            A persistent Sauna Application built for AAA productions. Receives live Jira webhooks, stores a full event history, surfaces duplicate ticket pairs across all module boards, and auto-generates weekly reports for three audiences on a Monday 9am schedule.
+          </p>
+        </div>
+
+        <!-- Two-col layout: left = description, right = live URL card -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-[40px] items-start">
+
+          <!-- Left: what it does -->
+          <div class="flex flex-col gap-8">
+            <div class="flex flex-col gap-3">
+              <h4 class="text-[16px] leading-snug text-[#0a0a0a]">Sprint health at a glance</h4>
+              <p class="text-[16px] leading-[24px] text-[#737373]">Five status cards — To Do, In Progress, In Review, Blocked, Done. Velocity bar against the milestone gate. Blocked tickets flagged in red with days-blocked counters. Every producer sees the whole board, not just their filter.</p>
+            </div>
+            <div class="flex flex-col gap-3">
+              <h4 class="text-[16px] leading-snug text-[#0a0a0a]">One-click duplicate merge</h4>
+              <p class="text-[16px] leading-[24px] text-[#737373]">Sauna clusters semantically similar tickets across module boards using Jaccard similarity. Each pair shows two Keep buttons. Click one — the duplicate transitions to Done in Jira, a comment lands, the dashboard Done count ticks up. No Jira access required from the producer.</p>
+            </div>
+            <div class="flex flex-col gap-3">
+              <h4 class="text-[16px] leading-snug text-[#0a0a0a]">Milestone Gates from Google Sheets</h4>
+              <p class="text-[16px] leading-[24px] text-[#737373]">Alpha, Beta, and Gold gate cards pulled from the milestone sheet alongside live Jira sprint data. Two sources, one view, zero copy-paste. Click Sync to re-read the sheet live.</p>
+            </div>
+          </div>
+
+          <!-- Right: live link card (dark) -->
+          <div class="bg-[#0a0a0a] rounded-[32px] p-8 flex flex-col gap-6">
+            <div>
+              <p class="text-[12px] leading-[16px] uppercase tracking-[0.1em] mb-3" style="color:#93efa4;">Live application</p>
+              <h3 class="text-[18px] leading-snug text-white mb-3">Running on real Jira data</h3>
+              <p class="text-[16px] leading-[24px] text-[#737373]">Connected to a live Jira project. Webhooks fire on every status change. Duplicate pairs resolve in real time. Weekly reports generate automatically every Monday at 9am.</p>
+            </div>
+            <ul class="text-[13px] leading-[20px] text-[#737373] flex flex-col gap-2">
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Dashboard — sprint cards + velocity</li>
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Duplicates — semantic scan + merge</li>
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Weekly Report — Team / Exec / Publisher tabs</li>
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Activity — tamper-proof Jira audit log</li>
+            </ul>
+            <a
+              href="https://jira-health-cprnuahjltcs.sauna.new/public/"
+              target="_blank"
+              class="inline-flex items-center justify-center h-11 w-full px-4 rounded-full bg-[#93efa4] hover:bg-[#7ad895] text-[#003116] text-[14px] leading-[20px] font-medium transition-colors duration-150"
+            >
+              Open live dashboard →
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+         INTEGRATIONS
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <section class="bg-[#faf9f7] py-12 md:py-[80px] px-6 md:px-[80px] rounded-b-[40px] overflow-hidden">
+      <div class="max-w-[1156px] mx-auto text-center">
+        <p class="text-[12px] leading-[16px] text-[#a3a3a3] uppercase tracking-[0.1em] mb-8">Connects to your whole stack</p>
+        <div class="flex flex-wrap justify-center gap-[12px] max-w-[860px] mx-auto">
+          <!-- Gmail -->
+          <span class="inline-flex items-center gap-2 text-[13px] leading-[20px] text-[#404040] bg-white border border-[#e9e8e6] rounded-full pl-2 pr-4 py-1.5">
+            <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="24" fill="#EA4335"/><path d="M10 14h28l-14 10L10 14z" fill="white"/><path d="M10 14v20h28V14L24 24 10 14z" fill="white" fill-opacity="0.2"/><path d="M10 14v20h8V21l6 5 6-5v13h8V14L24 24 10 14z" fill="white"/></svg>
+            Gmail
+          </span>
+          <!-- Google Calendar -->
+          <span class="inline-flex items-center gap-2 text-[13px] leading-[20px] text-[#404040] bg-white border border-[#e9e8e6] rounded-full pl-2 pr-4 py-1.5">
+            <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="24" fill="#1A73E8"/><rect x="12" y="14" width="24" height="22" rx="2" fill="white"/><rect x="12" y="14" width="24" height="8" fill="#1A73E8"/><rect x="18" y="10" width="3" height="7" rx="1.5" fill="#1A73E8"/><rect x="27" y="10" width="3" height="7" rx="1.5" fill="#1A73E8"/><rect x="16" y="26" width="6" height="6" rx="1" fill="#EA4335"/></svg>
+            Google Calendar
+          </span>
+          <!-- Slack -->
+          <span class="inline-flex items-center gap-2 text-[13px] leading-[20px] text-[#404040] bg-white border border-[#e9e8e6] rounded-full pl-2 pr-4 py-1.5">
+            <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="24" fill="#4A154B"/><path d="M18 14a4 4 0 000 8h4v-4a4 4 0 00-4-4z" fill="#E01E5A"/><path d="M14 26a4 4 0 008 0v-4H18a4 4 0 00-4 4z" fill="#E01E5A"/><path d="M30 34a4 4 0 000-8h-4v4a4 4 0 004 4z" fill="#2EB67D"/><path d="M34 22a4 4 0 00-8 0v4h4a4 4 0 004-4z" fill="#2EB67D"/><path d="M14 22a4 4 0 008 0v-4h-4a4 4 0 00-4 4z" fill="#36C5F0"/><path d="M26 14a4 4 0 000 8h4v-4a4 4 0 00-4-4z" fill="#36C5F0"/><path d="M34 26a4 4 0 00-8 0v4h4a4 4 0 004-4z" fill="#ECB22E"/><path d="M22 34a4 4 0 000-8h-4v4a4 4 0 004 4z" fill="#ECB22E"/></svg>
+            Slack
+          </span>
+          <!-- Notion -->
+          <span class="inline-flex items-center gap-2 text-[13px] leading-[20px] text-[#404040] bg-white border border-[#e9e8e6] rounded-full pl-2 pr-4 py-1.5">
+            <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="24" fill="#F7F6F3"/><path d="M16 12h12l8 8v20H16V12z" fill="#F7F6F3" stroke="#171814" stroke-width="2"/><path d="M28 12v8h8" stroke="#171814" stroke-width="2" stroke-linejoin="round"/><path d="M20 24h8M20 29h8M20 34h5" stroke="#171814" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Notion
+          </span>
+          <!-- Granola -->
+          <span class="inline-flex items-center gap-2 text-[13px] leading-[20px] text-[#404040] bg-white border border-[#e9e8e6] rounded-full pl-2 pr-4 py-1.5">
+            <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="24" fill="#1A1A1A"/><circle cx="24" cy="24" r="8" fill="#93efa4"/><circle cx="24" cy="24" r="3" fill="#1A1A1A"/></svg>
+            Granola
+          </span>
+          <!-- Zoom -->
+          <span class="inline-flex items-center gap-2 text-[13px] leading-[20px] text-[#404040] bg-white border border-[#e9e8e6] rounded-full pl-2 pr-4 py-1.5">
+            <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="24" fill="#2D8CFF"/><rect x="10" y="17" width="20" height="14" rx="3" fill="white"/><path d="M30 21l8-5v16l-8-5V21z" fill="white"/></svg>
+            Zoom
+          </span>
+          <!-- Jira -->
+          <span class="inline-flex items-center gap-2 text-[13px] leading-[20px] text-[#404040] bg-white border border-[#e9e8e6] rounded-full pl-2 pr-4 py-1.5">
+            <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="24" fill="#0052CC"/><path d="M24 12L13 23l5 5 6-6 6 6 5-5L24 12z" fill="white"/><path d="M24 36l11-11-5-5-6 6-6-6-5 5 11 11z" fill="white" fill-opacity="0.6"/></svg>
+            Jira
+          </span>
+          <!-- Confluence -->
+          <span class="inline-flex items-center gap-2 text-[13px] leading-[20px] text-[#404040] bg-white border border-[#e9e8e6] rounded-full pl-2 pr-4 py-1.5">
+            <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="24" fill="#0052CC"/><path d="M12 30c4-7 10-7 14-3s10 4 14-3l-3-2c-3 5-6 5-9 2s-11-3-15 4l-1 2z" fill="white"/><path d="M36 18c-4 7-10 7-14 3s-10-4-14 3l3 2c3-5 6-5 9-2s11 3 15-4l1-2z" fill="white"/></svg>
+            Confluence
+          </span>
+          <!-- Google Sheets -->
+          <span class="inline-flex items-center gap-2 text-[13px] leading-[20px] text-[#404040] bg-white border border-[#e9e8e6] rounded-full pl-2 pr-4 py-1.5">
+            <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="24" fill="#34A853"/><rect x="14" y="12" width="20" height="24" rx="2" fill="white"/><path d="M18 20h12M18 24h12M18 28h12M22 18v12M28 18v12" stroke="#34A853" stroke-width="1.6"/></svg>
+            Google Sheets
+          </span>
+          <!-- Discord -->
+          <span class="inline-flex items-center gap-2 text-[13px] leading-[20px] text-[#404040] bg-white border border-[#e9e8e6] rounded-full pl-2 pr-4 py-1.5">
+            <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="24" fill="#5865F2"/><path d="M32 16c-2-1-4-1.5-6-1.5l-.5 1c2 .5 3 1 4 1.5-3-1.5-7-1.5-10 0 1-.5 2-1 4-1.5l-.5-1c-2 0-4 .5-6 1.5-3 5-3.5 10-3 15 2 1.5 4 2.5 6 3l1.5-2c-1-.5-2-1-3-2 .5.5 4 2 8 2s7.5-1.5 8-2c-1 1-2 1.5-3 2l1.5 2c2-.5 4-1.5 6-3 .5-5 0-10-3-15zM20 28c-1.2 0-2.2-1.1-2.2-2.5S18.8 23 20 23s2.2 1.1 2.2 2.5S21.2 28 20 28zm8 0c-1.2 0-2.2-1.1-2.2-2.5S26.8 23 28 23s2.2 1.1 2.2 2.5S29.2 28 28 28z" fill="white"/></svg>
+            Discord
+          </span>
+          <!-- iMessage -->
+          <span class="inline-flex items-center gap-2 text-[13px] leading-[20px] text-[#404040] bg-white border border-[#e9e8e6] rounded-full pl-2 pr-4 py-1.5">
+            <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="24" fill="#34C759"/><path d="M24 12c-7 0-13 5-13 11 0 3 1.5 5.5 4 7.5L13 36l7-3c1.3.3 2.6.5 4 .5 7 0 13-5 13-11s-6-10.5-13-10.5z" fill="white"/></svg>
+            iMessage
+          </span>
+          <!-- WhatsApp -->
+          <span class="inline-flex items-center gap-2 text-[13px] leading-[20px] text-[#404040] bg-white border border-[#e9e8e6] rounded-full pl-2 pr-4 py-1.5">
+            <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="24" fill="#25D366"/><path d="M24 11c-7.2 0-13 5.8-13 13 0 2.4.7 4.7 1.9 6.7L11 37l6.5-1.7c1.9 1 4 1.7 6.5 1.7 7.2 0 13-5.8 13-13s-5.8-13-13-13z" fill="white"/><path d="M30 26.5c-.3-.7-1.5-1.3-2-1.5-.5-.2-1-.2-1.4.2-.4.3-.8.9-1 1.1-.2.2-.4.2-.7.1-1.3-.5-2.3-1.3-3.2-2.4-.5-.6-.9-1.3-.9-1.5 0-.2.2-.4.3-.6.1-.2.3-.4.4-.6.1-.2.1-.4 0-.6L20 18c-.3-.7-.7-.9-1-.9-.3 0-.6 0-.9 0-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.3s1.4 3.8 1.6 4.1c.2.3 2.7 4.4 6.7 6 3.2 1.3 3.9.9 4.6.9.7 0 2.3-.9 2.6-1.8.3-.9.3-1.7.2-1.6z" fill="#25D366"/></svg>
+            WhatsApp
+          </span>
+          <span class="inline-flex items-center gap-2 text-[13px] leading-[20px] text-[#93efa4] bg-[#fafaf9] border border-[#93efa4] rounded-full px-4 py-1.5">+ 200 more</span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+         TESTIMONIALS
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <section class="bg-[#fafaf9] py-12 md:py-[120px] px-6 md:px-[80px] rounded-b-[40px] overflow-hidden">
+      <div class="max-w-[1156px] mx-auto">
+        <div class="max-w-[540px] mb-16">
+          <p class="text-[12px] leading-[16px] text-[#a3a3a3] uppercase tracking-[0.1em] mb-4">What producers say</p>
+          <h2 class="text-[28px] md:text-[36px] leading-tight md:leading-[40px] text-[#0a0a0a] text-balance">
+            The best producers hate wasted Mondays.
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-[20px]">
+
+          <div class="bg-white rounded-[32px] p-8">
+            <p class="text-[16px] leading-[24px] text-[#171814] mb-6">
+              "Every Monday, the first three hours were the same — pull Jira, pull Granola, reformat the same
+              status into three different docs. Sauna does all three in one prompt. I haven't touched that workflow since."
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-[#e9e8e6] flex items-center justify-center text-[12px] font-semibold text-[#737373]">JT</div>
+              <div>
+                <div class="text-[13px] leading-[20px] text-[#171814]">Jordan T.</div>
+                <div class="text-[12px] leading-[16px] text-[#a3a3a3]">Senior Producer, AA studio</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-[#0a0a0a] rounded-[32px] p-8">
+            <p class="text-[16px] leading-[24px] text-[#d1cecc] mb-6">
+              "A new engineer joined mid-sprint and needed the full context on why we cut the combat system in
+              month three. I had Sauna pull the decision log and retro notes. He was up to speed in an hour.
+              That used to take a week."
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-[#404040] flex items-center justify-center text-[12px] font-semibold text-[#a3a3a3]">MR</div>
+              <div>
+                <div class="text-[13px] leading-[20px] text-white">Marcus R.</div>
+                <div class="text-[12px] leading-[16px] text-[#737373]">Lead Producer, mid-size studio</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-[32px] p-8">
+            <p class="text-[16px] leading-[24px] text-[#171814] mb-6">
+              "Sauna flagged two duplicate tickets across the ART and ENG boards — 13 story points counted twice.
+              One click merged them in Jira. Our Alpha estimate was wrong by two weeks and we didn't know it."
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-[#e9e8e6] flex items-center justify-center text-[12px] font-semibold text-[#737373]">PK</div>
+              <div>
+                <div class="text-[13px] leading-[20px] text-[#171814]">Priya K.</div>
+                <div class="text-[12px] leading-[16px] text-[#a3a3a3]">Game Producer, AAA studio</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+         PRICING
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <section id="pricing" class="bg-[#faf9f7] py-12 md:py-[120px] px-6 md:px-[80px] rounded-b-[40px] overflow-hidden">
+      <div class="max-w-[1156px] mx-auto">
+        <div class="max-w-[540px] mb-16">
+          <p class="text-[12px] leading-[16px] text-[#a3a3a3] uppercase tracking-[0.1em] mb-4">Pricing</p>
+          <h2 class="text-[28px] md:text-[36px] leading-tight md:leading-[40px] text-[#0a0a0a] text-balance mb-4">
+            Simple, flat pricing.
+          </h2>
+          <p class="text-[16px] leading-[24px] text-[#737373]">
+            No per-seat gotchas. No usage limits that punish deep research.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-[20px] max-w-[860px]">
+
+          <div class="bg-white rounded-[32px] p-8 flex flex-col gap-6">
+            <div>
+              <div class="text-[12px] leading-[16px] text-[#a3a3a3] uppercase tracking-[0.1em] mb-3">Basic</div>
+              <div class="text-[40px] leading-none font-semibold text-[#0a0a0a] mb-1">$49<span class="text-[16px] leading-[24px] font-medium text-[#737373]">/mo</span></div>
+              <div class="text-[13px] leading-[20px] text-[#a3a3a3]">Solo or associate producer</div>
+            </div>
+            <ul class="text-[13px] leading-[20px] text-[#737373] flex flex-col gap-3 flex-1">
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Jira + Sheets connection</li>
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Weekly status reports</li>
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Milestone health checks</li>
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> 250K context credits/mo</li>
+            </ul>
+            <a
+              href="https://sauna.ai"
+              class="inline-flex items-center justify-center h-11 w-full rounded-full border border-[#e9e8e6] text-[#171814] text-[14px] leading-[20px] font-medium hover:bg-[#fafaf9] transition-colors duration-150"
+            >
+              Get started
+            </a>
+          </div>
+
+          <div class="bg-[#0a0a0a] rounded-[32px] p-8 flex flex-col gap-6">
+            <div>
+              <div class="text-[12px] leading-[16px] uppercase tracking-[0.1em] mb-3" style="color:#93efa4;">Pro</div>
+              <div class="text-[40px] leading-none font-semibold text-white mb-1">$149<span class="text-[16px] leading-[24px] font-medium text-[#737373]">/mo</span></div>
+              <div class="text-[13px] leading-[20px] text-[#737373]">Senior producer or production lead</div>
+            </div>
+            <ul class="text-[13px] leading-[20px] text-[#737373] flex flex-col gap-3 flex-1">
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Unlimited tool connections</li>
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Publisher milestone doc assembly</li>
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Duplicate ticket scanning</li>
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Scheduled report runs</li>
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> 1M context credits/mo</li>
+            </ul>
+            <a
+              href="https://sauna.ai"
+              class="inline-flex items-center justify-center h-11 w-full px-4 rounded-full bg-[#93efa4] hover:bg-[#7ad895] text-[#003116] text-[14px] leading-[20px] font-medium transition-colors duration-150"
+            >
+              Get started
+            </a>
+          </div>
+
+          <div class="bg-white rounded-[32px] p-8 flex flex-col gap-6">
+            <div>
+              <div class="text-[12px] leading-[16px] text-[#a3a3a3] uppercase tracking-[0.1em] mb-3">Team</div>
+              <div class="text-[40px] leading-none font-semibold text-[#0a0a0a] mb-1">$399<span class="text-[16px] leading-[24px] font-medium text-[#737373]">/mo</span></div>
+              <div class="text-[13px] leading-[20px] text-[#a3a3a3]">Full production team</div>
+            </div>
+            <ul class="text-[13px] leading-[20px] text-[#737373] flex flex-col gap-3 flex-1">
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Up to 10 team members</li>
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Cross-module dashboard</li>
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Shared project memory</li>
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Priority support</li>
+              <li class="flex items-center gap-2"><span class="text-[#93efa4]">✓</span> Unlimited credits</li>
+            </ul>
+            <a
+              href="https://sauna.ai"
+              class="inline-flex items-center justify-center h-11 w-full rounded-full border border-[#e9e8e6] text-[#171814] text-[14px] leading-[20px] font-medium hover:bg-[#fafaf9] transition-colors duration-150"
+            >
+              Contact us
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+         FINAL CTA (white card on warm desk)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <section
+      class="relative w-full p-4 md:p-[40px] rounded-b-[40px] overflow-hidden"
+      style="background: linear-gradient(160deg, #2a1206 0%, #4a1e0a 28%, #623328 58%, #3a1508 100%);"
+    >
+      <div class="bg-white flex flex-col items-center justify-center min-h-[280px] md:min-h-[320px] rounded-[32px] md:rounded-[40px] overflow-hidden">
+        <div class="flex flex-col items-center justify-center gap-6 md:gap-8 p-8 md:p-[80px] text-center">
+          <h2 class="text-[#0a0a0a] text-[28px] md:text-[36px] leading-tight md:leading-[40px] font-medium max-w-[442px] text-balance">
+            C'mon in, Sauna's hot.
+          </h2>
+          <p class="text-[16px] leading-[24px] text-[#737373] max-w-[380px] text-balance">
+            The best producers make fast decisions because they never lose context.
+            Sauna is how you build that.
+          </p>
+          <a
+            href="https://sauna.ai"
+            class="inline-flex items-center justify-center h-11 w-[200px] px-4 rounded-full bg-[#93efa4] hover:bg-[#7ad895] text-[#003116] text-[14px] leading-[20px] font-medium transition-colors duration-150"
+          >
+            Get started for free
+          </a>
+          <p class="text-[12px] leading-[16px] text-[#a3a3a3]">No credit card required · 14-day free trial</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+         FOOTER
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <footer class="bg-[#fafaf9] border-t border-[#e9e8e6] py-10 px-6 md:px-[80px] flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <svg width="20" height="20" viewBox="0 0 28 28" fill="none">
+          <rect width="28" height="28" rx="7" fill="#93efa4"/>
+          <path d="M8 14C8 10.686 10.686 8 14 8s6 2.686 6 6-2.686 6-6 6" stroke="#003116" stroke-width="2.2" stroke-linecap="round"/>
+          <circle cx="14" cy="14" r="2.2" fill="#003116"/>
+        </svg>
+        <span class="text-[14px] leading-[20px] font-medium text-[#171814]">Sauna</span>
+      </div>
+      <p class="text-[12px] leading-[16px] text-[#a3a3a3]">
+        © 2026 HeyDaily Inc. ·
+        <a href="https://sauna.ai/privacy" class="hover:text-[#737373] transition-opacity">Privacy</a> ·
+        <a href="https://sauna.ai/terms" class="hover:text-[#737373] transition-opacity">Terms</a>
+      </p>
+      <div class="flex items-center gap-6">
+        <a href="https://twitter.com/saunai_" class="text-[12px] leading-[16px] text-[#a3a3a3] hover:opacity-80 transition-opacity">Twitter</a>
+        <a href="https://linkedin.com/company/saunaai" class="text-[12px] leading-[16px] text-[#a3a3a3] hover:opacity-80 transition-opacity">LinkedIn</a>
+      </div>
+    </footer>
+
+  </body>
+</html>
